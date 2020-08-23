@@ -6,3 +6,27 @@ const EXAMPLE_SENATORS = [
 ];
 
 /* Your code goes here */
+
+export class App extends Component {
+	render() {
+		let message = "US Senators 2019";
+		let appClass = "container";
+		return (
+			<div className={appClass}>
+				<h1>
+					{message}
+				</h1>
+				<SenatorTable />
+			</div>
+		);
+	}
+}
+
+export class SenatorTable extends Component {
+	render() {
+		let tableClass = "table table-bordered";
+		return (
+			<table className={tableClass}></table>
+		);
+	}
+}
