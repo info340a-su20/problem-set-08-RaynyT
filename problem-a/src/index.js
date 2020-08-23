@@ -5,4 +5,4 @@ import ReactDOM from 'react-dom';
 
 import {App} from './App.js';
 import senatorsData from './senators.json'
-ReactDOM.render(<App senators=senatorsData />, document.getElementById('root'));
+ReactDOM.render(<App senators={senatorsData} />, document.getElementById('root'));
