@@ -35,7 +35,7 @@ class App extends React.Component {
 
 						<div id="petList" className="col-9">
 							<h2>Dogs for Adoption</h2>
-							<PetList adopt={this.adopt} pets={pets} isAdopted={this.state.isAdopted} />
+							<PetList adopt={this.adopt} pets={this.state.pets} isAdopted={this.state.isAdopted} />
 						</div>
 					</div>
 				</main>
@@ -116,7 +116,7 @@ class PetList extends Component {
 			<div class="card-deck">
 				{pets.map((pet) => {
 					return (
-						<PetCard onCLick={this.props.adopt} pet={pet} isAdopted={isAdopted[pet]} />
+						<PetCard onCLick={this.props.adopt} pet={pet} isAdopted={this.props.isAdopted[pet]} />
 					);
 				})};
 			</div>
